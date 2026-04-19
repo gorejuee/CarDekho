@@ -8,15 +8,15 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Health check
 app.get('/', (req, res) => res.json({ status: 'CarAdvisor API running' }));
 
-// One-hit seeder endpoint (for Railway — run once after deploy)
+// One-hit seeder endpoint
 app.get('/api/seed', async (req, res) => {
   try {
     await sequelize.sync({ force: true });
-    const { default: seed } = await import('./seed.js');
-    res.json({ message: 'Seeded' });
+    const cars = require('./seed-data');
+    await Car.bulkCreate(cars);
+    res.json({ message: `Seeded ${cars.length} cars successfully` });
   } catch (err) {
     res.status(500).json({ error: err.message });
   }
