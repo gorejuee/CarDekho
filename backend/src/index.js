@@ -4,6 +4,8 @@ const cors = require('cors');
 const sequelize = require('./config/database');
 const Car = require('./models/Car');
 
+console.log('PORT env value:', process.env.PORT);
+
 const app = express();
 app.use(cors());
 app.use(express.json());
