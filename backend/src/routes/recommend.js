@@ -47,7 +47,9 @@ router.post('/recommend', async (req, res) => {
     }
 
     if (cars.length === 0) {
-      return res.status(404).json({ error: 'No cars found even after relaxing filters. Try a higher budget.' });
+      return res.status(404).json({ 
+        error: 'No cars found in this price range in our current database. Try widening your budget range or check back as we keep adding new cars.'
+      });
     }
 
     const userProfile = {
@@ -60,6 +62,7 @@ router.post('/recommend', async (req, res) => {
     res.json({
       total_matches: cars.length,
       filters_applied: where,
+      all_matches: cars, 
       ...groqResult,
     });
   } catch (err) {

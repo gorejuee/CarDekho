@@ -189,6 +189,29 @@ const cars = [
     use_case_tags: ['premium', 'comfort', 'highway', 'professional'],
     description: 'Pinnacle of cabin luxury in its class. Hyperscreen MBUX, air suspension, soft-close doors. For buyers where comfort, prestige, and brand image matter above all else.',
   },
+
+  // ── ULTRA PREMIUM (₹70L–₹1Cr+) ──────────────────────────────────────────
+  {
+    make: 'Mercedes-Benz', model: 'E-Class', variant: 'E 220d LWB',
+    price_lakhs: 78.50, mileage_kmpl: 17.6, fuel_type: 'diesel',
+    seating_capacity: 5, safety_rating: 5.0, segment: 'luxury',
+    use_case_tags: ['premium', 'comfort', 'highway', 'professional', 'chauffeur'],
+    description: 'Long-wheelbase executive sedan with best-in-class rear legroom. Preferred by business owners and senior executives who want chauffeur-driven comfort with the option to self-drive.',
+  },
+  {
+    make: 'BMW', model: '5 Series', variant: '530d M Sport',
+    price_lakhs: 72.90, mileage_kmpl: 18.9, fuel_type: 'diesel',
+    seating_capacity: 5, safety_rating: 5.0, segment: 'luxury',
+    use_case_tags: ['premium', 'driving_enthusiast', 'highway', 'professional', 'sporty'],
+    description: 'The ultimate business sedan that doubles as a driver\'s car. 286hp diesel, M Sport chassis, widescreen cockpit. For business owners who refuse to compromise between performance and prestige.',
+  },
+  {
+    make: 'Mercedes-Benz', model: 'GLE', variant: '300d 4MATIC',
+    price_lakhs: 96.50, mileage_kmpl: 15.2, fuel_type: 'diesel',
+    seating_capacity: 5, safety_rating: 5.0, segment: 'luxury',
+    use_case_tags: ['premium', 'comfort', 'highway', 'weekend', 'luxury_suv'],
+    description: 'The pinnacle of luxury SUVs under ₹1Cr. Air suspension, Burmester sound, MBUX with AR navigation. For couples who want a weekend escape vehicle that turns heads everywhere.',
+  },
 ];
 
 async function seed() {
