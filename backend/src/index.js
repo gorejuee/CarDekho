@@ -31,7 +31,7 @@ sequelize.authenticate()
     console.log('✅ Database connected');
     return sequelize.sync();
   })
-  .then(() => app.listen(PORT, () => console.log(`🚀 Server on port ${PORT}`)))
+  .then(() => app.listen(PORT, '0.0.0.0', () => console.log(`🚀 Server on port ${PORT}`)))
   .catch(err => {
     console.error('❌ Startup failed:', err);
     process.exit(1);
